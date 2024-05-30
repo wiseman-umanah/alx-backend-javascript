@@ -2,11 +2,12 @@
 import { uploadPhoto, createUser } from './util';
 
 function handleProfileSignup() {
-  return uploadPhoto()
-    .then((photo) => createUser().then((user) => {
+  return Promise.all([uploadPhoto(), createUser()])
+    .then((results) => {
+      const [photo, user] = results;
       console.log(photo.body, user.firstName, user.lastName);
       return { photo, user };
-    }))
+    })
     .catch((error) => {
       console.error('Signup system offline', error);
     });
