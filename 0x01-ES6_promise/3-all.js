@@ -1,15 +1,17 @@
-/* eslint-disable no-unused-vars */
-import { uploadPhoto, createUser } from './util';
+/* eslint-disable import/extensions */
+// eslint-disable-next-line import/no-unresolved
+import { createUser, uploadPhoto } from './utils';
 
 function handleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
-    .then((results) => {
-      const [photo, user] = results;
-      console.log(photo.body, user.firstName, user.lastName);
-      return { photo, user };
+    .then((values) => {
+      const { body } = values[0];
+      const { firstName, lastName } = values[1];
+
+      console.log(`${body} ${firstName} ${lastName}`);
     })
-    .catch((error) => {
-      console.error('Signup system offline', error);
+    .catch(() => {
+      console.log('Signup system offline');
     });
 }
 
