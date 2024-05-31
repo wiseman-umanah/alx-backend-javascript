@@ -12,7 +12,7 @@ const asyncUploadUser = async () => {
     user = null;
   }
 
-  console.log({ photo, user });
+  return ({ photo, user });
 };
 
 export default asyncUploadUser;
