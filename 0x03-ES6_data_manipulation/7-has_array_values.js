@@ -1,4 +1,8 @@
 export default function hasValuesFromArray(set, arr) {
-  const res = arr.map((x) => set.has(x));
-  return res.map(String).includes('false') ? 'false' : 'true';
+  for (const element of arr) {
+    if (!set.has(element)) {
+      return 'false';
+    }
+  }
+  return 'true';
 }
