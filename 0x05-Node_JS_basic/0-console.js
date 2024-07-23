@@ -1,8 +1,6 @@
-/* display function to print to stdout
-* message: the mesage to print
-*/
+/* eslint-disable no-undef */
 
 function displayMessage(message) {
     console.log(message)
 }
-export default displayMessage
+module.exports = displayMessage
