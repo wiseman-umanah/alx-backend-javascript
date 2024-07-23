@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const process = require('process')
+const process = require('process');
 console.log('Welcome to Holberton School, what is your name?');
 process.stdin.on('data', name => {
   process.stdout.write(`Your name is: ${name}`);
