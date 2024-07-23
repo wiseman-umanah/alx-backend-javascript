@@ -15,7 +15,7 @@ const countStudents = (filepath) => {
           const students = data.filter(x => x[x.length - 1].trim() === category).map(x => x[0].trim());
           result += `Number of students in ${category}: ${students.length}. List: ${students.join(', ')}\n`;
         });
-
+        console.log(result);
         res(result.trim());
       } catch (e) {
         rej(new Error('Cannot process the data'));
