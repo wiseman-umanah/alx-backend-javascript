@@ -10,6 +10,7 @@ function countStudents (file) {
       const students = data.filter(x => x[x.length - 1].trim() === category).map(x => x[0].trim());
       console.log(`Number of students in ${category}: ${students.length}. List: ${students.join(', ')}`);
     });
+  // eslint-disable-next-line no-unused-vars
   } catch (err) {
     throw new Error('Cannot load the database');
   }

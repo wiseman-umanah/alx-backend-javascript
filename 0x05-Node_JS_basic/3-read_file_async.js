@@ -17,8 +17,9 @@ const countStudents = (filepath) => {
         });
         console.log(result);
         res(result.trim());
+      // eslint-disable-next-line no-unused-vars
       } catch (e) {
-        rej(new Error('Cannot process the data'));
+        rej(new Error('Cannot load the database'));
       }
     });
   };
