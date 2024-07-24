@@ -7,13 +7,12 @@ const app = http.createServer(async (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
     if (req.url === '/') res.write('Hello Holberton School!');
     if (req.url === '/students') {
-      res.write('This is the list of our students\n');
       const data = await countStudents(process.argv[2]);
-      res.write(data);
+      res.write(`This is the list of our students\n${data}`);
     }
   // eslint-disable-next-line no-unused-vars
   } catch (err) {
-    res.write('Cannot load database');
+    res.write('This is the list of our students\nCannot load database');
   } finally {
     res.end();
   }
