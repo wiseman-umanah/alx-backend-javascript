@@ -1,0 +1,27 @@
+{
+  "name": "mocha",
+  "version": "10.7.0",
+  "description": "Mocha library for running tests ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mochajs/mocha.git"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mochajs/mocha/issues"
+  },
+  "homepage": "https://github.com/mochajs/mocha#readme",
+  "dependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^10.7.0",
+    "sinon": "^18.0.0"
+  }
+}
