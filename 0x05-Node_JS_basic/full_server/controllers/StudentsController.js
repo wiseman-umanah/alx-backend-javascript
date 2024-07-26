@@ -23,7 +23,7 @@ class StudentsController {
                 res.status(500).send('Cannot load the database');
             }
         } else {
-            res.sendStatus(500);
+            res.status(500).send('Major parameter must be CS or SWE');
         }
     }
 }
