@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/mochajs/mocha#readme",
   "dependencies": {
+    "babel-node": "^0.0.1-security",
     "chai": "^4.4.1",
+    "express": "^4.19.2",
     "mocha": "^10.7.0",
+    "nodemon": "^3.1.4",
     "sinon": "^18.0.0"
   }
 }
